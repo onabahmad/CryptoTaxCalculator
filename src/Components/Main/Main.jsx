@@ -38,10 +38,11 @@ const Main = () => {
   // Calculate tax rate based on annual income
   const calculateTaxRate = () => {
     const annualIncomeRanges = {
-      "0-45000": 0.1,
-      "45001-120000": 0.325,
-      "120001-200000": 0.375,
-      "200001-Infinity": 0.4,
+      "0-18,200": 0,
+      "18,201-45,000": 0.19,
+      "45,001-120,000": 0.325,
+      "120,001-180,000": 0.375,
+      "180,001-Infinity": 0.45,
     };
 
     return annualIncomeRanges[annualIncomeRange] || 0;
@@ -87,10 +88,11 @@ const Main = () => {
 
   // Define options for the annual income dropdown
   const annualIncomeOptions = [
-    { label: "$0 - $45000", value: "0-45000" },
-    { label: "$45001 - $120000", value: "45001-120000" },
-    { label: "$120001 - $200000", value: "120001-200000" },
-    { label: "Over $200000", value: "200001-Infinity" },
+    { label: "$0 - $18,200", value: "0-18,200" },
+    { label: "$18,201 - $45,000", value: "18,201-45,000" },
+    { label: "$45,001 - $120,000", value: "45,001-120,000" },
+    { label: "$120,001- $180,000", value: "120,001-180,000" },
+    { label: "Over $180,000", value: "180,001-Infinity" },
   ];
 
   return (
@@ -184,7 +186,6 @@ const Main = () => {
           />
         </div>
         <div className="tax_rate_details">
-        
           <p className="Tax_rate">{`Tax Rate:  $5092 + ${(
             calculateTaxRate() * 100
           ).toFixed(1)}% of excess over $45,001`}</p>
@@ -217,7 +218,7 @@ const Main = () => {
             <label className="Tax_result_labels">
               Net Capital gain tax amount
             </label>
-            <p className="gain">${calculateCapitalGains()}</p>
+            <p className="gain">${calculateNetCapitalGains()}</p>
           </div>
           <div className="tax_amount">
             <label className="Tax_result_labels">Tax you need to pay*</label>
