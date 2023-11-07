@@ -1,0 +1,212 @@
+label,
+span {
+  font-size: 12px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.Main_container {
+  margin: 1rem;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.Main_header {
+  display: flex;
+  justify-content: center;
+}
+.country_dropdown {
+  background-color: #f4f4f4;
+}
+.year_Country {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  padding-bottom: 15px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dfe0e0;
+}
+
+.Input_details {
+  justify-content: left;
+}
+.Purchase_Price,
+.Sale_Price,
+.Expenses,
+.Capital_gains,
+.Discount_gains {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.Textbox {
+  background-color: #f4f4f4;
+  text-decoration: none;
+  height: 35px;
+  padding-left: 17px;
+  border-radius: 6px;
+  border: none;
+}
+
+.Textbox:focus {
+  background-color: white;
+  border: 1px solid blue;
+}
+.buttons_section {
+  display: flex;
+  justify-content: space-between;
+}
+.investment-button {
+  width: 160px;
+  height: 40px;
+  border: 1px solid;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-align: start;
+  font-weight: 600;
+}
+.selected {
+  background-color: #edf7fc;
+  color: #1f45fc;
+  border: 2px solid #1f45fc;
+
+  position: relative;
+}
+
+.selected::before {
+  content: "\2713"; /* Unicode character for a checkmark */
+  position: absolute;
+  top: 44%;
+  left: 91%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+.Months_details {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+}
+.tax_rate_details {
+  display: flex;
+}
+.Tax_rate {
+  font-size: 11px;
+}
+
+.Tax_results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.Capital_gain {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: #e8f5e9;
+  text-decoration: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+}
+.gain {
+  color: #66bb6a;
+
+  font-weight: 900;
+}
+.tax_amount {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: #afdbf5;
+  text-decoration: none;
+  border: none;
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+}
+.pay_tax {
+  color: #4169e1;
+  font-weight: 900;
+}
+.Tax_result_labels {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .Main_container {
+    width: 50%;
+    margin-left: 4rem;
+  }
+  .year_Country {
+    justify-content: center;
+  }
+
+  .label-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .Input_details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .Purchase_Price,
+  .Expenses {
+    margin-left: 40px;
+  }
+  .Sale_Price,
+  .buttons-labels,
+  .Capital_gains {
+    margin-left: 40px;
+  }
+  .Discount_gains {
+    margin-left: 50px;
+  }
+  .investment-button {
+    width: 120px;
+  }
+  .buttons_section {
+    gap: 8px;
+  }
+  .Textbox {
+    width: 220px;
+    height: 40px;
+  }
+  .Annual-income {
+    width: 240px;
+    margin-left: 40px;
+  }
+  .tax_rate_details {
+    margin-left: 50px;
+    align-items: end;
+  }
+  .Tax_results {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .Capital_gain,
+  .tax_amount {
+    width: 250px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+}

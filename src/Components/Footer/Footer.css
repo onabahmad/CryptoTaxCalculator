@@ -1,0 +1,28 @@
+.footer_container {
+  background-color: #000435;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.socials_details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.all_rights {
+  color: white;
+  font-size: 10px;
+}
+
+.socials {
+  color: #0247fe;
+}
+
+.Product_company_PR {
+  color: rgb(255, 255, 255);
+}
+h5 {
+  color: #0247fe;
+}
